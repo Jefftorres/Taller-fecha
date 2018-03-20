@@ -2,7 +2,9 @@
 	class Fecha{
 
 		constructor(mes, dia, anio){
-			
+			this.mes = mes;
+			this.dia = dia;
+			this.anio = anio;
 		}
 
 		get mes() {
@@ -22,7 +24,14 @@
 		}
 
 		function validarBisiesto(anio) {
-			
+			if ((anio%4 == 0 || anio%400 == 0) && (anio%100 == 0)) {
+				console.log(anio + "Es bisiesto.");
+				return true;
+			} 
+			else { 
+				console.log(anio + "No es bisiesto.");
+				return false; 
+			}
 		}
 
 		function validarFecha(fecha) {
